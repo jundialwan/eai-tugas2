@@ -21,7 +21,7 @@ function searchWithCriteria($service, $criteria, $attributes)
         $match = false;
 
         foreach ($attributes as $att)        
-            if (!strpos(strtoupper($a[$att]), strtoupper($criteria)))
+            if (strpos(strtoupper($a[$att]), strtoupper($criteria)))
                 $match = true; break;
         
         if ($match)

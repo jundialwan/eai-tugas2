@@ -19,8 +19,7 @@
       </tr>
     </thead>
     <tbody>                  
-      <? if(isset($_POST['course'])): ?>
-        <? $courses = searchCourse((isset($_POST['course_criteria']))? $_POST['course_criteria'] : ''); ?>
+      <? if(isset($_POST['course'])): ?>        
         <? if (count($courses) > 0): ?>
           <? for($i=0; $i<count($courses); $i++): ?>
 

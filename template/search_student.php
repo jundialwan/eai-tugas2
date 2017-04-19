@@ -21,8 +21,7 @@
       </tr>
     </thead>
     <tbody>
-      <? if (isset($_POST['student'])): ?>
-        <? $students = searchStudent((isset($_POST['student_criteria'])) ? $_POST['student_criteria'] : ''); ?>
+      <? if (isset($_POST['student'])): ?>        
         <? if (count($students) > 0): ?>
           <? for($i=0; $i<count($students); $i++): ?>
 

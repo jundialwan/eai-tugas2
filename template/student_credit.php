@@ -36,8 +36,7 @@
       </tr>
     </thead>
     <tbody>
-      <? if (isset($_POST['credit'])): ?>
-        <? $students = searchStudentsWithCredit($_POST['study_program'], $_POST['semester']); $i = 0; ?>
+      <? if (isset($_POST['credit'])): ?>        
         <? if (count($students) > 0): ?>
           <? foreach ($students as $k => $v): ?>
 

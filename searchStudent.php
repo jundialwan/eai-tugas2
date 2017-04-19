@@ -1,5 +1,5 @@
 <?
-    include 'base.php';
+    include 'model/model.php';
 
     $page = 'search_student';
 

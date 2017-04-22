@@ -9,6 +9,11 @@
     </div>                                
   </form>
   <br>
+  
+  <? if (isset($_POST['course'])): ?>
+    <div class="alert alert-info" role="alert">Found <? echo count($courses) ?> course(s) for terms '<? echo $_POST['course_criteria']; ?>' on course ID and course name</div>  
+  <? endif; ?>
+
   <table class="table table-striped">
     <thead>
       <tr>

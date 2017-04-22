@@ -9,6 +9,11 @@
     </div>                                
   </form>
   <br>
+
+  <? if (isset($_POST['student'])): ?>
+    <div class="alert alert-info" role="alert">Found <? echo count($students) ?> student(s) for terms '<? echo $_POST['student_criteria']; ?>' on student ID and student name</div>  
+  <? endif; ?>
+
   <table class="table table-striped">
     <thead>
       <tr>

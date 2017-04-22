@@ -25,6 +25,11 @@
     <button class="btn btn-primary btn-block">Search</button>
   </form>
   <br>
+
+  <? if (isset($_POST['credit'])): ?>
+    <div class="alert alert-info" role="alert">Found <? echo count($accumulated_payments) ?> student(s) for <? echo $programs_assoc[$_POST['study_program']]['name']; ?> study program on 2016/2017 - <? echo $_POST['semester']; ?> term</div>  
+  <? endif; ?>
+
   <table class="table table-striped">
     <thead>
       <tr>

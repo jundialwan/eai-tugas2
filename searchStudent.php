@@ -4,7 +4,10 @@
     $page = 'search_student';
 
     if (isset($_POST['student']))
-        $students = searchStudent((isset($_POST['student_criteria'])) ? $_POST['student_criteria'] : '');
+    {
+        $criteria = (isset($_POST['student_criteria'])) ? $_POST['student_criteria'] : '';
+        $students = searchWithCriteria(search('student'), ($criteria === '' ? [] : [$criteria]), ['name', 'studentID']);        
+    }
 
     include 'template/master.php';
 ?>

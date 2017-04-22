@@ -37,8 +37,9 @@
     </thead>
     <tbody>
       <? if (isset($_POST['credit'])): ?>        
-        <? if (count($students) > 0): ?>
-          <? foreach ($students as $k => $v): ?>
+        <? if (count($accumulated_payments) > 0): ?>
+          <? $i = 0; ?>
+          <? foreach ($accumulated_payments as $k => $v): ?>
 
             <tr>
               <td><? echo $i+1; ?></td>

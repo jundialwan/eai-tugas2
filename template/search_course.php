@@ -33,7 +33,7 @@
           <? endfor; ?>
         <? else: ?>
           <tr>
-            <td colspan="4">No course found in given criteria</td>
+            <td colspan="6" class="text-center">No course found in given criteria</td>
           </tr>
         <? endif; ?> 
       <? else: ?>

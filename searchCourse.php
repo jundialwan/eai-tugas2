@@ -1,5 +1,5 @@
-<?
-    include 'model/model.php';
+<?php
+    include './model/model.php';
 
     $page = 'search_course';
 
@@ -9,5 +9,5 @@
         $courses = searchWithCriteria(search('courses'), ($criteria === '' ? [] : [$criteria]), ['name', 'coursesID']);
     }
 
-    include 'template/master.php';
+    include './template/master.php';
 ?>

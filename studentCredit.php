@@ -1,5 +1,5 @@
-<?
-    include 'model/model.php';
+<?php
+    include './model/model.php';
 
     $page = 'student_credit';
 
@@ -33,5 +33,5 @@
             $programs_assoc[$p['studyprogramID']] = $p;    
     }
 
-    include 'template/master.php';
+    include './template/master.php';
 ?>

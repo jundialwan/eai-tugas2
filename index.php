@@ -1,7 +1,7 @@
-<? 
-  include 'model/model.php'; 
+<?php
+  include './model/model.php'; 
 
   $page = 'about';
 
-  include 'template/master.php';
+  include './template/master.php';
 ?>

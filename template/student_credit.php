@@ -6,9 +6,9 @@
       <div class="col-md-10">
         <select name="study_program" id="study_program" class="form-control" required>                  
           <option value="" selected disabled>-- Select study program below --</option>
-          <? foreach ($programs as $p): ?>
-          <option value="<? echo $p['studyprogramID']; ?>"><? echo $p['name']; ?></option>
-          <? endforeach; ?>
+          <?php foreach ($programs as $p): ?>
+          <option value="<?php echo $p['studyprogramID']; ?>"><?php echo $p['name']; ?></option>
+          <?php endforeach; ?>
         </select>                  
       </div>
     </div>
@@ -26,9 +26,9 @@
   </form>
   <br>
 
-  <? if (isset($_POST['credit'])): ?>
-    <div class="alert alert-info" role="alert">Found <? echo count($accumulated_payments) ?> student(s) for <? echo $programs_assoc[$_POST['study_program']]['name']; ?> study program on 2016/2017 - <? echo $_POST['semester']; ?> term</div>  
-  <? endif; ?>
+  <?php if (isset($_POST['credit'])): ?>
+    <div class="alert alert-info" role="alert">Found <?php echo count($accumulated_payments) ?> student(s) for <?php echo $programs_assoc[$_POST['study_program']]['name']; ?> study program on 2016/2017 - <?php echo $_POST['semester']; ?> term</div>  
+  <?php endif; ?>
 
   <table class="table table-striped">
     <thead>
@@ -41,31 +41,31 @@
       </tr>
     </thead>
     <tbody>
-      <? if (isset($_POST['credit'])): ?>        
-        <? if (count($accumulated_payments) > 0): ?>
-          <? $i = 0; ?>
-          <? foreach ($accumulated_payments as $k => $v): ?>
+      <?php if (isset($_POST['credit'])): ?>        
+        <?php if (count($accumulated_payments) > 0): ?>
+          <?php $i = 0; ?>
+          <?php foreach ($accumulated_payments as $k => $v): ?>
 
             <tr>
-              <td><? echo $i+1; ?></td>
-              <td><? echo $v['studentID']; ?></td>
-              <td><? echo $v['name']; ?></td>
-              <td><? echo $v['amount']; ?></td>
-              <td><? echo $v['credit']; ?></td>
+              <td><?php echo $i+1; ?></td>
+              <td><?php echo $v['studentID']; ?></td>
+              <td><?php echo $v['name']; ?></td>
+              <td><?php echo $v['amount']; ?></td>
+              <td><?php echo $v['credit']; ?></td>
             </tr>
 
-            <? $i++; ?>
-          <? endforeach; ?>
-        <? else: ?>
+            <?php $i++; ?>
+          <?php endforeach; ?>
+        <?php else: ?>
           <tr>
             <td colspan="4" class="text-center">No students found in given criteria</td>
           </tr>
-        <? endif; ?> 
-      <? else: ?>
+        <?php endif; ?> 
+      <?php else: ?>
         <tr>
           <td colspan="4" class="text-center">No data to display</td>
         </tr>
-      <? endif; ?>
+      <?php endif; ?>
     </tbody>
   </table>
 </div>

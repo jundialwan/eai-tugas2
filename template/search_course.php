@@ -10,9 +10,9 @@
   </form>
   <br>
   
-  <? if (isset($_POST['course'])): ?>
-    <div class="alert alert-info" role="alert">Found <? echo count($courses) ?> course(s) for terms '<? echo $_POST['course_criteria']; ?>' on course ID and course name</div>  
-  <? endif; ?>
+  <?php if (isset($_POST['course'])): ?>
+    <div class="alert alert-info" role="alert">Found <?php echo count($courses) ?> course(s) for terms '<?php echo $_POST['course_criteria']; ?>' on course ID and course name</div>  
+  <?php endif; ?>
 
   <table class="table table-striped">
     <thead>
@@ -24,28 +24,28 @@
       </tr>
     </thead>
     <tbody>                  
-      <? if(isset($_POST['course'])): ?>        
-        <? if (count($courses) > 0): ?>
-          <? for($i=0; $i<count($courses); $i++): ?>
+      <?php if(isset($_POST['course'])): ?>        
+        <?php if (count($courses) > 0): ?>
+          <?php for($i=0; $i<count($courses); $i++): ?>
 
             <tr>
-              <td><? echo $i+1; ?></td>                            
-              <td><? echo $courses[$i]['coursesID']; ?></td>
-              <td><? echo $courses[$i]['name']; ?></td>                            
-              <td><? echo $courses[$i]['semester']; ?></td>
+              <td><?php echo $i+1; ?></td>                            
+              <td><?php echo $courses[$i]['coursesID']; ?></td>
+              <td><?php echo $courses[$i]['name']; ?></td>                            
+              <td><?php echo $courses[$i]['semester']; ?></td>
             </tr>
 
-          <? endfor; ?>
-        <? else: ?>
+          <?php endfor; ?>
+        <?php else: ?>
           <tr>
             <td colspan="6" class="text-center">No course found in given criteria</td>
           </tr>
-        <? endif; ?> 
-      <? else: ?>
+        <?php endif; ?> 
+      <?php else: ?>
         <tr>
           <td colspan="6" class="text-center">No data to display</td>
         </tr>
-      <? endif; ?>                                                         
+      <?php endif; ?>                                                         
     </tbody>
   </table>
 </div>

@@ -34,22 +34,22 @@
       <div class="row">
         <div class="col-md-8 col-sm-12 col-md-offset-2">
           <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="<? echo $page === 'about' ? 'active' : ''; ?>">
+            <li role="presentation" class="<?php echo $page === 'about' ? 'active' : ''; ?>">
               <a href="index.php" role="tab">About</a>
             </li>
-            <li role="presentation" class="<? echo $page === 'search_student' ? 'active' : ''; ?>">
+            <li role="presentation" class="<?php echo $page === 'search_student' ? 'active' : ''; ?>">
               <a href="searchStudent.php" role="tab">Search Student</a>
             </li>
-            <li role="presentation" class="<? echo $page === 'search_course' ? 'active' : ''; ?>">
+            <li role="presentation" class="<?php echo $page === 'search_course' ? 'active' : ''; ?>">
               <a href="searchCourse.php" role="tab">Search Course</a>
             </li>
-            <li role="presentation" class="<? echo $page === 'student_credit' ? 'active' : ''; ?>">
+            <li role="presentation" class="<?php echo $page === 'student_credit' ? 'active' : ''; ?>">
               <a href="studentCredit.php" role="tab">Student Credit</a>
             </li>         
           </ul>
 
           <div class="tab-content">
-            <? include 'template/'.$page.'.php'; ?>                        
+            <?php include 'template/'.$page.'.php'; ?>                        
           </div>
         </div>
       </div>
